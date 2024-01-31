@@ -1,0 +1,355 @@
+:root {
+
+    --clr-primary-purple-800:hsl(300, 43%, 22%);
+    --clr-primary-pink:hsl(333, 80%, 67%);
+    --clr-secondary-purple-500:hsl(303, 10%, 53%);
+    --clr-secondary-purple-200:hsl(300, 24%, 96%);
+    --clr-secondary-white:hsl(0, 0%, 100%);
+
+    --ff-main: 'League Spartan',serif;
+
+    --fw-light:400;
+    --fw-regular:500;
+    --fw-bold:700;
+
+}
+
+
+
+
+               /*RESET */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+
+             /*GENERAL STYLING*/
+
+
+
+html,
+body{
+    font-size: 15px;
+    height:100%;
+    width:100%;
+    display:grid;
+    place-content:center;
+    font-family:var(--ff-main);
+    overflow: hidden;
+    text-overflow: ellipsis;
+   
+    
+    
+    
+    
+
+}
+
+.grid-container {
+    display:grid;
+    grid-template: 1fr 1fr/ 1fr 2fr;
+    
+    gap: 4rem;
+    
+    justify-items:center;
+    margin:5rem 7rem;
+    
+    
+    
+    
+
+
+}
+
+.grid-review {
+  grid-column: 1/span2;
+}
+
+
+              /*SUBHEADING AND PARAGRAPH SECTION*/
+  
+
+
+.grid-text {
+  display:grid;
+  gap: 1em;
+  color:var(--clr-primary-purple-800);
+
+}
+
+
+.grid-text h1 {
+  
+  font-weight: var(--fw-bold);
+  margin-right: 5rem;
+  line-height: 80%;
+  font-size: 3rem;;
+
+  
+}
+
+.grid-text p {
+ font-weight:var(--fw-light);
+}
+
+
+
+
+                /*RATING SECTION*/
+
+
+
+
+  .grid-rating {
+
+    display:grid;
+    gap: 1rem;
+    color:var(--clr-primary-purple-800);
+    font-weight: var(--fw-bold);
+    align-content: center;
+    justify-content: center;
+    
+
+  }
+
+  .grid-rating > p {
+    background-color: var(--clr-secondary-purple-200);
+    padding:1rem 5rem;
+    font-weight: var(--fw-bold);
+    padding-left: 2rem;
+    border-radius: 1rem;
+    
+
+  }
+  
+  .grid-rating svg {
+    display:inline;
+    margin-right: 0.7rem;
+  }
+
+  .grid-rating .rating-text {
+    margin-left: 2rem;
+  }
+
+
+  .grid-rating .rating-step-one {
+    margin-right:8rem;
+  }
+
+  .grid-rating .rating-step-two {
+    margin-left: 4rem;
+    margin-right: 4rem;
+
+  }
+
+  .grid-rating .rating-step-three {
+    margin-left: 8rem;
+  }
+
+  
+
+  
+
+
+
+
+
+                  /*REVIEW SECTION*/
+
+
+ .grid-review {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  
+
+  
+
+ } 
+
+ .grid-review .review-one,
+ .review-two,
+ .review-three
+  {
+  background-color: var(--clr-primary-purple-800);
+  color:var(--clr-secondary-purple-200);
+  padding:2rem;
+  border-radius: 0.7rem;
+
+
+
+ }
+
+ .grid-review .review-name-one,
+ .review-name-two,
+ .review-name-three {
+  font-weight: var(--fw-bold);
+  
+  
+ }
+
+ .grid-review .verified-buyer {
+  color:var(--clr-primary-pink);
+  font-weight: var(--fw-bold);
+ }
+
+ .grid-review .review-one {
+  margin-bottom: 4rem;
+
+ }
+ .grid-review .review-two {
+  margin-top: 2rem;
+  margin-bottom:2rem;
+  
+ }
+ .grid-review .review-three {
+  margin-top: 4rem;
+  
+ }
+
+
+          
+          /*BUYER ONE*/
+
+
+ .grid-review .review-name-one::before {
+  content:"";
+  display:inline-block;
+  width:45px;
+  height:45px;
+  float:left;
+  border-radius:2rem;
+  background: url("images/image-colton.jpg");
+  background-size:contain;
+  margin-right: 2rem;
+  
+ }
+
+
+
+          /*BUYER TWO*/
+
+  
+
+.grid-review .review-name-two::before {
+  content:"";
+  display:inline-block;
+  width:45px;
+  height:45px;
+  float:left;
+  border-radius:2rem;
+  background: url("images/image-irene.jpg")no-repeat;
+  background-size:contain;
+  margin-right: 2rem;
+  
+  }
+
+
+
+         /*BUYER THREE*/
+  
+
+ 
+  .grid-review .review-name-three::before {
+  content:"";
+  display:inline-block;
+  width:45px;
+  height:45px;
+  float:left;
+  border-radius:2rem;
+  background: url("images/image-anne.jpg")no-repeat;
+  background-size:contain;
+  margin-right: 2rem;
+  
+  }  
+  
+  
+
+  @media only screen and (max-width:900px) {
+    
+
+    
+    
+    .grid-container {
+      overflow:auto;
+      margin:0;
+      padding: 4rem 1rem;
+      gap:2rem;
+      
+
+    }
+
+   .grid-text h1 {
+    margin-right: 0;
+    text-align: center;
+   }
+   .grid-text p {
+    text-align: center;
+   }
+
+
+   .grid-text,
+   .grid-rating,
+   .grid-review,
+   .review-one,
+   .review-two,
+   .review-three {
+    grid-column: 1/span2;
+    
+  
+   }
+
+    .grid-review .review-one,
+    .grid-review .review-two,
+    .grid-review .review-three {
+      margin-bottom: 0.5rem;
+      margin-top: 0.7rem;
+
+      
+
+    }
+    .grid-rating .rating-step-one,
+    .grid-rating .rating-step-two,
+    .grid-rating .rating-step-three {
+      margin-inline:0;
+      
+    }
+
+    .grid-review {
+      gap:0.5rem;
+    }
+
+    
+    .grid-rating .rating-text {
+      display:block;
+    }
+    
+   .grid-rating .rating-step-one,
+   .rating-step-two,
+   .rating-step-three {
+     text-align: center;
+   }  
+   
+
+   
+    
+
+  }
